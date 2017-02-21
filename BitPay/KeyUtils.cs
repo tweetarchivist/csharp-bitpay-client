@@ -39,9 +39,9 @@ namespace BitPayAPI
             return createEcKeyFromHexString(privateKey);
         }
 
-        public static EcKey loadEcKey()
+        public static EcKey loadEcKey(string path)
         {
-            using (FileStream fs = File.OpenRead(PRIV_KEY_FILENAME))
+            using (FileStream fs = File.OpenRead(path))
             {
                 byte[] b = new byte[1024];
                 fs.Read(b, 0, b.Length);

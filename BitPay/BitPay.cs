@@ -246,7 +246,7 @@ namespace BitPayAPI
         {
             if (KeyUtils.privateKeyExists())
             {
-                _ecKey = KeyUtils.loadEcKey();
+                _ecKey = KeyUtils.loadEcKey("bitpay_private.key");
 
                 // Alternatively, load your private key from a location you specify.
                 //_ecKey = KeyUtils.createEcKeyFromHexStringFile("C:\\Users\\Andy\\Documents\\private-key.txt");
